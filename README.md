@@ -15,7 +15,7 @@ python main.py
 # Maybe implement
 * history of incorrect words
 * GUI
-..* Graphs showing progress over time
+  * Graphs showing progress over time
 
 # Credits
 Text Corpus:
