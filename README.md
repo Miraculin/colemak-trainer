@@ -11,6 +11,7 @@ python main.py
 * different error metric, probably Levenshtein distance
 * command-line parameters to control length, number of words and home row only
 * quick redo last set
+* Software QWERTY - Colemak mapping
 
 # Maybe implement
 * history of incorrect words
