@@ -1,5 +1,5 @@
 def scoreAbsouluteWordDifference(refText, inputText):
-    refSplit=refText.split()
+    refSplit = refText.split()
     inputSplit = inputText.split()
 
     errors = 0

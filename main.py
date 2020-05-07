@@ -15,4 +15,4 @@ if __name__ == "__main__":
     timeTaken = time.time()-t
     print("Time Taken: " + str(timeTaken) + "s")
     print("Uncorrected WPM: " + str(numWords/timeTaken*60))
-    printer.printCorrectIncorrect(displayText,typed)
+    printer.printCorrectIncorrect(displayText, typed)

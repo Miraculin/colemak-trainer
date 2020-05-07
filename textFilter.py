@@ -2,6 +2,7 @@ from random import sample
 GOOGLE_CORPUS = 'text/google-10000-english-no-swears.txt'
 BIGRAM_CORPUS = 'text/2-letter.txt'
 
+
 def generateNWordsByLength(n, length, homerow=False):
     '''
     Length Categories:
@@ -17,9 +18,10 @@ def generateNWordsByLength(n, length, homerow=False):
         filtered = filter(lambda x: lengthFilter(x, length), map(lambda y: y.rstrip(), corpus))
         if homerow:
             filtered = filter(homerowFilter, filtered)
-        sampledWords = sample(list(filtered),k=max(n, len(list(filtered))))
+        sampledWords = sample(list(filtered), k=max(n, len(list(filtered))))
         # print(sampledWords)
         return sampledWords
+
 
 def lengthFilter(word, length):
     if length == 0:
@@ -33,14 +35,16 @@ def lengthFilter(word, length):
     else:
         return True
 
+
 def homerowFilter(word):
-    homerowLetters = ['A', 'R' ,'S','T','D','H','N','E','I','O', '\n']
+    homerowLetters = ['A', 'R', 'S', 'T', 'D', 'H', 'N', 'E', 'I', 'O', '\n']
     homerowOnly = True
     for letter in word.upper():
         if letter not in homerowLetters:
             homerowOnly = False
 
     return homerowOnly
+
 
 if __name__ == "__main__":
     generateNWordsByLength(10, 0)
