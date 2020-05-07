@@ -4,9 +4,11 @@ A simple CLI-based colemak trainer implemented in Python. The current error metr
 # Current Usage
 Currently, running main.py will generate 10 words between 0-4 letters long using letters only found on the home row of
 the colemak layout.
-'''
+
+```
 python main.py
-'''
+```
+
 # TODO
 * different error metric, probably Levenshtein distance
 * command-line parameters to control length, number of words and home row only
