@@ -25,9 +25,10 @@ if __name__ == "__main__":
     difficulty = args.difficulty
     homerow = args.homerow
 
-    print(numWords)
-    print(difficulty)
-    print(homerow)
+    print("Number of words: "+str(numWords))
+    print("Word length: " + str(difficulty))
+    print("Homerow only?: " + str(homerow))
+
     wordsToType = textFilter.generateNWordsByLength(numWords, difficulty, homerow)
     displayText = " ".join(wordsToType)
 
