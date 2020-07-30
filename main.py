@@ -25,8 +25,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    printer.printColemakLayout()
-
     numWords = args.numWords
     difficulty = args.difficulty
     homerow = args.homerow
@@ -39,6 +37,7 @@ if __name__ == "__main__":
     displayText = " ".join(wordsToType)
 
     if not args.gui:
+        printer.printColemakLayout()
         for i in range(0, 3):
             print(str(3-i))
             time.sleep(1)
@@ -54,9 +53,13 @@ if __name__ == "__main__":
     else:
         root = Tk()
         root.title("Colemak Training Tool")
+        # root.minsize(640, 360)
         main_frame = ttk.Frame(root, padding="3 3 12 12")
         main_frame.grid(stick=(N, W, E, S))
-        main_gui = inputWindow(main_frame)
+        # main_frame.columnconfigure(0, weight=1)
+
+        main_gui = inputWindow(main_frame, displayText)
+        main_gui.set_cmd_params(numWords, difficulty, homerow)
         root.columnconfigure(0, weight=1)
         root.rowconfigure(0, weight=1)
         root.mainloop()
